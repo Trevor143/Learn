@@ -29,7 +29,29 @@ class User extends Authenticatable
     }
 
     public function photo(){
-        return $this->belongsTo('app\Photo');
+        return $this->belongsTo('App\Photo');
 
     }
+
+    public function post(){
+        return $this->belongsTo('App\Post');
+
+    }
+
+    public function isAdmin(){
+
+        if($this->role->name== 'Admin' && $this->isActive==1){
+
+            return true;
+
+        }
+
+            return false;
+//            return view('/welcome');
+
+
+
+    }
+
+
 }
