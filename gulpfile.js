@@ -32,6 +32,6 @@ elixir(function(mix) {
             'libs/sb-admin-2.js',
             'libs/scripts.js'
 
-        ], '.public/js/libs.js')
+        ], './public/js/libs.js')
 
 });

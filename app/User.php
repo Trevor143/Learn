@@ -33,8 +33,8 @@ class User extends Authenticatable
 
     }
 
-    public function post(){
-        return $this->belongsTo('App\Post');
+    public function posts(){
+        return $this->hasMany('App\Post');
 
     }
 
